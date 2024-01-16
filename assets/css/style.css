@@ -18,6 +18,8 @@ Root Elements
     --color-b: #27201C;
     --color-base-1: #efefef;
     --color-base-2: #F7F7F7;
+    --color-paragraph: #5B6766;
+    --color-paragraph-2: #fafafa;
 }
 
 /* Colors */
@@ -34,6 +36,16 @@ Root Elements
 .hover-color-a:hover , .color-a-active{
     color: var(--color-a);
 }
+.hover-color-b:hover , .color-b-active{
+    color: var(--color-b);
+}
+
+.color-paragraph{
+    color: var(--color-paragraph);
+}
+.color-paragraph-2{
+    color: var(--color-paragraph-2);
+}
 
 /* Backgrounds */
 .bg-a{
@@ -46,11 +58,18 @@ Root Elements
     background: var(--color-base-2);
 }
 
+.fw-semibold{
+    font-weight: 600;
+}
 
 
 /* ``````````````````````````````````````````````
 Reusable Componant 
 ``````````````````````````````````````````````` */
+.spacer-top{
+    content: '';
+    padding-top: 80px;
+}
 body{
     font-family: 'Quicksand', sans-serif;
 }
@@ -59,29 +78,50 @@ body{
     padding-left: 40px;
     padding-right: 20px;
 }
-.bb{
-    border-bottom: .5px solid var(--color-base-1);
-}
+
 .input {
     height: 40px;
     width: 100%;
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.12);
+    padding-left: 10px;
     background: transparent;
 }
-
-
+.border-00{
+    border: none;
+}
+.bb{
+    border-bottom: .5px solid var(--color-base-1);
+}
+.reservation-form-container .input:focus{
+    outline: none;
+}
+.reservation-form-container textarea.input , .reservation-form-container .input {
+    border-radius: 0;
+}
+.reservation-form-container textarea.input {
+    height: unset;
+}
 
 .transition-ease-3s{
     transition: .3s ease;
 }
-
+.cursor-pointer{
+    cursor: pointer;
+}
 .button{
     padding: 6px 18px;
     border: none;
     border-radius: 4px;
     outline: none;
     transition: ease .3s;
+}
+.link_button{
+    border: 0.5px solid var(--color-paragraph);
+    font-size: 14px;
+    padding: 9px;
+    border-radius: 6px;
+    width: 100%;
 }
 .button img{
     width: 16px;
@@ -107,6 +147,9 @@ body{
 .button-a-reverse{
     color: #fafafa;
     background: var(--color-a);
+}
+.button-a-reverse:hover{
+    background: var(--color-b);
 }
 .food-items-container {
     padding-bottom: 80px;
@@ -308,6 +351,13 @@ section.menu-categories-section {
     width: 43.05%;
     background: #fff;
 }
+
+.font-60{
+    font-size: 60px;
+}
+
+
+
 /* ``````````````````````````````````````````````
 Right Area feDiffuseLighting
 ``````````````````````````````````````````````` */
@@ -325,7 +375,10 @@ Right Area feDiffuseLighting
 }
 .right-area-dynamic-image{
     height: 100vh;
-    background: url(../img/main-right-image.jpg) top center / cover no-repeat ;
+    background: url(../img/main-right-image.jpg) ;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
 }
 
 .input-right-item{
@@ -335,4 +388,10 @@ Right Area feDiffuseLighting
 }
 .input-right-item.text{
     right: 15px;
+}
+.has-right-items-overly{
+    left: 43.05%;
+    bottom: 10px;
+    z-index: 9999;
+    padding: 30px 50px;
 }

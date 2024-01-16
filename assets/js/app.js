@@ -31,4 +31,14 @@ $(document).ready(function(){
         var th = $(this).closest('.wrap-quantity-button').find('.count');    	
         if (th.val() > 0) th.val(+th.val() - 1);
     });
+    $('.password-hide').click(function(){
+        $('.password-field').attr('type','text');
+        $('.password-hide').addClass('d-none');
+        $('.password-open').removeClass('d-none');
+    });
+    $('.password-open').click(function(){
+        $('.password-field').attr('type','password');
+        $('.password-open').addClass('d-none');
+        $('.password-hide').removeClass('d-none');
+    });
 });
