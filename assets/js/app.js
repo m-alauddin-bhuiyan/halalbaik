@@ -41,4 +41,22 @@ $(document).ready(function(){
         $('.password-open').addClass('d-none');
         $('.password-hide').removeClass('d-none');
     });
+
+
+    // Cart Add Close Button
+    $('.cart-add').click(function(){
+        $('.footer-buttons').addClass('show');
+    });
+    $('.close-cart').click(function(){
+        $('.footer-buttons').removeClass('show');
+    });
+
+
+    // View Product Full Image
+    $('.food-left-side').click(function(){
+        var thisElement = $(this.childNodes[1]);
+        var imageSrc = thisElement[0].children[0].currentSrc;
+        $('.right-area-dynamic-image').css("background-image", "url(" + imageSrc + ")");
+    });
+
 });

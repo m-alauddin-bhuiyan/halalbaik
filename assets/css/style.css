@@ -158,7 +158,9 @@ body{
 .op-10p{
     background: rgba(0, 0, 0, 0.10);
 }
-
+.fs-18{
+    font-size: 18px;
+}
 
 
 /* ``````````````````````````````````````````````
@@ -280,6 +282,15 @@ section.menu-categories-section {
 .single-food{
     padding: 20px 0px;
     border-bottom: 1px solid var(--color-base-1);
+    cursor: pointer;
+}
+.food-img img {
+    width: 88px;
+    height: 88px;
+    border-radius: 8px;
+}
+.favoutite-icons-container img{
+    width: 20px;
 }
 .single-food:last-child{
     border-bottom: none;
@@ -330,7 +341,7 @@ section.menu-categories-section {
 .favourite-icon {
     position: absolute;
     right: 5px;
-    top: 5px;
+    top: -25px;
     cursor: pointer;
 }
 
@@ -344,14 +355,17 @@ section.menu-categories-section {
 
 .footer-buttons{
     padding: 20px 0px;
-    box-shadow: 1px 0px 2px -1px #000000a8;
+    box-shadow: 1px 17px 20px 3px #0000009e;
     position: fixed;
-    bottom: 0;
+    bottom: -50%;
     z-index: 99;
     width: 43.05%;
     background: #fff;
+    transition: .3s ease-in-out;
 }
-
+.footer-buttons.show{
+    bottom: 0;
+}
 .font-60{
     font-size: 60px;
 }
