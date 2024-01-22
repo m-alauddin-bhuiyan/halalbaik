@@ -586,13 +586,75 @@
                                 </div>
                             </div>
 
-                            <button class="button button-a-reverse full-width d-flex justify-content-between">
+                            <button class="button button-a-reverse full-width d-flex justify-content-between" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <span class="badge py-2 px-3 op-10p">2</span>
                                 <span>Review Order</span>
                                 <span>45 SAR</span>
                             </button>
+
                         </div>
                     </section>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header justify-content-end border-0">
+                                    <div class="text-end">
+                                        <a href="javascript:void(0)" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times p-2 rounded-pill color-b hover-color-a"></i></a>
+                                    </div>
+                                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item w-50p" role="presentation">
+                                          <button class="py-3 nav-link order-method-tab full-width active color-b fw-semibold hover-color-a" id="pills-delivery-tab" data-bs-toggle="pill" data-bs-target="#pills-delivery" type="button" role="tab" aria-controls="pills-delivery" aria-selected="true">Delivery</button>
+                                        </li>
+                                        <li class="w-50p " role="presentation">
+                                          <button class="py-3 nav-link order-method-tab full-width color-b fw-semibold hover-color-a" id="pills-pickup-tab" data-bs-toggle="pill" data-bs-target="#pills-pickup" type="button" role="tab" aria-controls="pills-pickup" aria-selected="false">Pickup</button>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-delivery" role="tabpanel" aria-labelledby="pills-delivery-tab" tabindex="0">
+                                            
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header" id="flush-headingOne">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                      Accordion Item #1
+                                                    </button>
+                                                  </h2>
+                                                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                  </div>
+                                                </div>
+
+                                                <div class="accordion-item">
+                                                  <h2 class="accordion-header" id="flush-headingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                      Accordion Item #2
+                                                    </button>
+                                                  </h2>
+                                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+
+
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-pickup" role="tabpanel" aria-labelledby="pills-pickup-tab" tabindex="0">
+                                            Pickup Address
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -610,6 +672,7 @@
 </body>
 
 <script src="./assets/lib/jquery/jquery.min.js"></script>
+<script src="./assets/lib/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="./assets/js/app.js"></script>
 
 

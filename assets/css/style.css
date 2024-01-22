@@ -148,6 +148,10 @@ body{
     color: #fafafa;
     background: var(--color-a);
 }
+.order-method-tab.active{
+    color: #fafafa !important;
+    background: var(--color-a) !important;
+}
 .button-a-reverse:hover{
     background: var(--color-b);
 }
@@ -358,7 +362,7 @@ section.menu-categories-section {
     box-shadow: 1px 17px 20px 3px #0000009e;
     position: fixed;
     bottom: -50%;
-    z-index: 99;
+    z-index: 9999;
     width: 43.05%;
     background: #fff;
     transition: .3s ease-in-out;
@@ -371,6 +375,33 @@ section.menu-categories-section {
 }
 
 
+/* Modal Setup */
+body.hasOverly {
+    position: relative;
+    overflow: hidden;
+}
+
+body.hasOverly::before {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    content: '';
+    transition: .3s ease;
+    z-index: 9999;
+}
+.modal{
+    width: 43.05%;
+    z-index: 999999;
+}
+.modal-backdrop{
+    z-index: 99999;
+}
+
+.w-50p{
+    width: 50%;
+}
 
 /* ``````````````````````````````````````````````
 Right Area feDiffuseLighting
@@ -403,9 +434,11 @@ Right Area feDiffuseLighting
 .input-right-item.text{
     right: 15px;
 }
+
 .has-right-items-overly{
     left: 43.05%;
     bottom: 10px;
     z-index: 9999;
     padding: 30px 50px;
 }
+

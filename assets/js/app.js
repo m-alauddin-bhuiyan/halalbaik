@@ -46,9 +46,11 @@ $(document).ready(function(){
     // Cart Add Close Button
     $('.cart-add').click(function(){
         $('.footer-buttons').addClass('show');
+        $('body').addClass('hasOverly');
     });
     $('.close-cart').click(function(){
         $('.footer-buttons').removeClass('show');
+        $('body').removeClass('hasOverly');
     });
 
 
